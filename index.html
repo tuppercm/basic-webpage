@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔆 All About Lighthouses</title>
+
+    <style>
+      h1 {
+        color: whitesmoke;
+        text-align: center;
+      }
+
+      h2 {
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 200;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.25;
+      }
+
+      a {
+        color: #9ed8f7;
+        font-style: italic;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        border: 1px solid #157aa5;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        color: #157aa5;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 15px auto;
+        padding: 10px 15px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #157aa5;
+        color: white;
+        cursor: pointer;
+      }
+
+      img {
+        border: 2px solid black;
+        border-radius: 10px;
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+      }
+
+      .caption {
+        color: whitesmoke;
+        font-size: small;
+        line-height: 1.5;
+        margin: 5px auto;
+        text-align: center;
+      }
+
+      .credits {
+        color: #a6dcf3;
+        font-style: italic;
+      }
+
+      .coder {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12px;
+        margin: 10px auto;
+        text-align: center;
+      }
+
+      .help {
+        color: whitesmoke;
+        font-style: oblique;
+      }
+
+      .outline {
+        background: linear-gradient(
+          350deg,
+          rgb(40, 214, 214) -0.5%,
+          rgb(28, 30, 99) 94.5%
+        );
+        border-radius: 10px;
+        color: #002a41;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+        padding: 5px 30px;
+        width: 550px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outline">
+      <h1>🔆 A Light in the Dark 🔆</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/926/original/IMG_2802.JPG?1648059704"
+        alt="Cape Otway Lightstation"
+      />
+      <p class="caption">
+        First lit in 1848, the
+        <em><strong>Cape Otway Lightstation</strong></em
+        >, or <em>'Beacon of Hope'</em>, is the oldest surviving lighthouse in
+        mainland Australia and considered to be the most significant.<br />
+        <span class="credits">Photo Credit: Caitlin Tupper</span>
+      </p>
+      <hr />
+      <h2>About</h2>
+      <p>
+        A <strong>lighthouse</strong> is a tower or other structure displaying
+        or flashing a very bright light for the guidance of ships in avoiding
+        dangerous areas. Lighthouses mark dangerous coastlines, hazardous
+        shoals, reefs, rocks, and safe entries to harbors. Once widely used, the
+        number of operational lighthouses has declined due to the expense of
+        maintenance plus the advent of much cheaper, more sophisticated and
+        effective electronic navigational systems.
+      </p>
+      <hr />
+      <h2>Preservation</h2>
+      <p>
+        As lighthouses became less essential to navigation, many of their
+        historic structures faced demolition or neglect. In the United States,
+        the
+        <a
+          href="https://en.wikipedia.org/wiki/National_Historic_Lighthouse_Preservation_Act"
+          target="_blank"
+          >National Historic Lighthouse Preservation Act of 2000
+        </a>
+        provides for the transfer of lighthouse structures to local governments
+        and private non-profit groups, while the USCG continues to maintain the
+        lamps and lenses.
+      </p>
+
+      <hr />
+      <p>
+        Subscribe to our monthly newsletter to learn more about lighthouse
+        history and
+        <span class="help">how you can help save a lighthouse</span>.
+      </p>
+
+      <button>Subscribe</button>
+    </div>
+    <div class="coder">
+      <p>This page was created by <strong>Caitlin Tupper</strong></p>
+    </div>
+
+    <script>
+      function subscribe() {
+        let name = prompt("What is your first name?");
+        name = name.trim();
+        let email = prompt("What is your email?");
+        let adopt = prompt(
+          "Would you like information on how you can adopt a lighthouse?"
+        );
+        adopt = adopt.toLowerCase();
+        adopt = adopt.trim();
+        let message = `Thank you for subscribing to our newsletter, ${name}!`;
+
+        if (adopt === "y" || adopt === "yes") {
+          alert(
+            `${message}` +
+              " We'll also send you details on how you can adopt a lighthouse."
+          );
+        } else {
+          alert(`${message}`);
+        }
+      }
+
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
